@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="BTS, Momentum" />
+    <meta name="Description" content="BTS - Momentum" />
+    <meta name="author" content="eue" />
+    <meta property="og:title" content="BTS - Momentum" />
+    <meta property="og:description" content="BTS - Momentum" />
+    <meta property="og:image" content="img/ogimage.png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>BTS - Momentum</title>
+  </head>
+
+  <body>
+    <form id="login-form" class="login-form hidden">
+      <div class="purple-you">
+        <span>보라해!</span>
+        <div></div>
+      </div>
+      <h2>“What's your name?”</h2>
+      <input
+        class="border-style--main"
+        required
+        maxlength="15"
+        type="text"
+        placeholder="Write your name and Press Enter"
+      />
+    </form>
+
+    <div id="date" class="date hidden"><span></span></div>
+    <div class="clock-box">
+      <h2 id="clock" class="clock hidden">00:00:00</h2>
+    </div>
+    <h1 id="greeting" class="greeting border-style--main hidden"></h1>
+
+    <form id="todo-form" class="todo-form hidden">
+      <div class="todo-title border-style--main">TO DO LIST</div>
+      <input
+        class="border-style--main"
+        type="text"
+        placeholder="Write a To Do and Press Enter"
+      />
+    </form>
+    <ul id="todo-list" class="todo-list"></ul>
+
+    <div id="quote-box" class="quote-box hidden">
+      <div id="recommend-song" class="recommend-song"></div>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="75"
+        height="75"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M14 12c0 1.103-.897 2-2 2s-2-.897-2-2 .897-2 2-2 2 .897 2 2zm10 0c0 6.627-5.373 12-12 12s-12-5.373-12-12 5.373-12 12-12 12 5.373 12 12zm-15.44 4.912c-.572-.401-1.07-.899-1.471-1.471l-3.691 1.641c.859 1.45 2.071 2.662 3.521 3.521l1.641-3.691zm7.44-4.912c0-2.209-1.791-4-4-4s-4 1.791-4 4 1.791 4 4 4 4-1.791 4-4zm4.603-5.08c-.859-1.451-2.071-2.663-3.522-3.522l-1.641 3.691c.572.401 1.07.899 1.472 1.471l3.691-1.64z"
+        />
+      </svg>
+      <div id="quote" class="quote">
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <div id="weather" class="weather hidden">
+      <span></span>
+      <span></span>
+    </div>
+
+    <div id="btn-setting" class="btn-setting hidden">
+      <div id="quote-change">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 11.701c0 2.857-1.869 4.779-4.5 5.299l-.498-1.063c1.219-.459 2.001-1.822 2.001-2.929h-2.003v-5.008h5v3.701zm6 0c0 2.857-1.869 4.779-4.5 5.299l-.498-1.063c1.219-.459 2.001-1.822 2.001-2.929h-2.003v-5.008h5v3.701z"
+          />
+        </svg>
+      </div>
+      <div id="bg-change">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-6.373 16.199c3.809.315 2.446-3.73 5.97-3.769l1.526 1.274c.381 4.6-5.244 5.626-7.496 2.495zm8.293-3.396l-1.549-1.293c.457-2.18 1.854-4.188 3.267-5.51l3.362 2.804c-1.041 1.636-3.023 3.154-5.08 3.999z"
+          />
+        </svg>
+      </div>
+    </div>
+
+    <script src="js/greetings.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/quotes.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/day.js"></script>
+  </body>
+</html>

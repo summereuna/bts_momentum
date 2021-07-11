@@ -1,0 +1,374 @@
+* {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+input:focus {
+  outline: none;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Border box Stylee */
+
+.border-style--main {
+  background-color: rgba(128, 0, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  padding: 2px 12px;
+}
+
+/* Background Image */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.bgImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  align-content: center;
+  z-index: -1;
+  animation: fadeIn 0.5s linear;
+}
+
+/* Clock */
+
+.clock-box {
+  position: absolute;
+  top: 35%;
+  left: 50px;
+  width: 420px;
+}
+
+.clock {
+  font-size: 50px;
+  font-weight: 600;
+}
+
+/* Bubble Purple You */
+
+@keyframes bubblePurpleYou {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+.purple-you {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 51px;
+  position: relative;
+  animation: bubblePurpleYou 2s ease-in-out infinite;
+}
+
+.purple-you span {
+  font-size: 20px;
+  font-weight: 600;
+  text-shadow: none;
+  background-image: linear-gradient(to top, #7028e4 0%, #d746ff 100%);
+  padding: 8px 10px;
+  border-radius: 25px;
+  box-shadow: 0px 0px 10px 1px rgba(255, 255, 255, 0.5);
+}
+
+.purple-you div {
+  position: absolute;
+  display: block;
+  border-style: solid;
+  border-color: #7028e4 transparent;
+  border-width: 10px 7px 0;
+  bottom: 1px;
+}
+
+/* Log In Form */
+
+.login-form {
+  position: absolute;
+  top: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 30px;
+}
+
+.login-form input {
+  margin-top: 20px;
+  width: 300px;
+  padding: 10px 0;
+
+  font-size: 17px;
+  font-weight: 600;
+  color: rgba(128, 0, 255, 0.7);
+  text-shadow: 1px 0 5px rgba(255, 255, 255, 0.8);
+  text-align: center;
+
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: border-color 0.5s ease-in-out;
+}
+
+.login-form input::placeholder {
+  color: white;
+  text-shadow: 1px 0 5px rgba(0, 0, 0, 0.8);
+}
+
+.login-form input::-webkit-input-placeholder {
+  text-align: center;
+  font-weight: 400;
+}
+
+.login-form input:-moz-placeholder {
+  /* Firefox 18- */
+  text-align: center;
+  font-weight: 400;
+}
+
+.login-form input::-moz-placeholder {
+  /* Firefox 19+ */
+  text-align: center;
+  font-weight: 400;
+}
+
+.login-form input:-ms-input-placeholder {
+  text-align: center;
+  font-weight: 400;
+}
+
+.login-form input:focus {
+  border-color: #d15eff;
+}
+
+/* Greeting */
+
+.greeting {
+  position: absolute;
+  top: 44%;
+  left: 50px;
+  font-size: 18px;
+  font-weight: 200;
+  font-style: italic;
+}
+
+/* To Do Form */
+
+.todo-form {
+  position: absolute;
+  top: 32%;
+  right: 50px;
+}
+
+.todo-title {
+  padding: 7px;
+  font-size: 15px;
+  font-weight: 200;
+  font-style: italic;
+  width: 100px;
+  text-align: center;
+}
+
+.todo-form input {
+  box-sizing: border-box;
+  margin-top: 15px;
+  width: 245px;
+  padding: 10px 0 10px 20px;
+  font-size: 15px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 0 5px rgba(0, 0, 0, 0.8);
+  text-align: left;
+
+  transition: border-color 0.5s ease-in-out;
+}
+
+.todo-form input::placeholder {
+  color: white;
+  text-shadow: 1px 0 5px rgba(0, 0, 0, 0.8);
+}
+
+.todo-form input:focus {
+  border-color: #000000;
+}
+
+.todo-list {
+  width: 245px;
+  position: absolute;
+  top: 44%;
+  right: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  list-style: none;
+  height: 255px;
+  overflow: auto;
+}
+
+.todo-list li {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 400;
+  padding: 5px 10px;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 10px 0;
+  text-shadow: none;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.todo-list button {
+  font-size: 15px;
+  font-weight: 600;
+  margin-left: 10px;
+  color: rgb(227, 0, 0);
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.todo-list button:hover {
+  transform: scale(0.8);
+}
+
+/* Quote */
+
+.quote-box {
+  position: absolute;
+  bottom: 30px;
+  left: 50px;
+  display: flex;
+  align-items: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes rotateCD {
+  from {
+    transform: none;
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+.quote-box svg {
+  position: absolute;
+  left: 43px;
+  fill: rgba(0, 0, 0, 0.7);
+  animation: rotateCD 2s linear infinite;
+}
+
+.quote {
+  margin-left: 50px;
+  width: 300px;
+  font-size: 15px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+}
+
+.quote span:last-child {
+  font-size: 12px;
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+/* Recommend Song */
+.recommend-song {
+  z-index: 2;
+}
+
+.recommend-song img {
+  width: 80px;
+  height: 80px;
+  border-radius: 3px;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3);
+}
+
+/* Bottom Buttons */
+
+.btn-setting {
+  box-sizing: border-box;
+  width: 75px;
+  height: 40px;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  right: 50px;
+  bottom: 30px;
+  fill: white;
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.btn-setting svg {
+  transition: fill 0.3s ease-in-out;
+}
+
+.btn-setting svg:hover {
+  fill: #d15eff;
+  cursor: pointer;
+}
+
+/* Date and Weather*/
+.date,
+.weather {
+  font-size: 15px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  height: 30px;
+}
+
+/* Date */
+
+.date {
+  position: absolute;
+  top: 31%;
+  left: 50px;
+  padding: 0 10px;
+}
+
+/* Weather */
+
+.weather {
+  position: absolute;
+  top: 20px;
+  left: 50px;
+  padding-right: 10px;
+}
+
+.weather span:first-child img {
+  width: 35px;
+  height: 35px;
+}
