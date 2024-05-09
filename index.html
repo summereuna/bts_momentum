@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="kor">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -11,12 +11,12 @@
     <meta property="og:description" content="BTS - Momentum" />
     <meta property="og:image" content="img/ogimage.png" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>BTS - Momentum</title>
+    <title>BTS Momentum</title>
   </head>
 
   <body>
-    <form id="login-form" class="login-form hidden">
-      <div class="purple-you">
+    <form id="login-form" class="login-form hidden" aria>
+      <div class="purple-you" aria-label="greeting: purple you!">
         <span>보라해!</span>
         <div></div>
       </div>
@@ -27,34 +27,82 @@
         maxlength="15"
         type="text"
         placeholder="Write your name and Press Enter"
+        aria-label="name input"
       />
     </form>
 
-    <div id="date" class="date hidden"><span></span></div>
+    <div id="date" class="date hidden" aria-label="today date"></div>
     <div class="clock-box">
-      <h2 id="clock" class="clock hidden">00:00:00</h2>
+      <h2 id="clock" class="clock hidden" aria-label="current time">
+        00:00:00
+      </h2>
     </div>
+    <h1
+      id="greeting"
+      class="greeting border-style--main hidden"
+      aria-label="greeting: purple you!"
+    ></h1>
 
-    <div id="dDay" class="d-day">
+    <div id="dDay" class="d-day hidden">
       <div class="border-style--main">D-Day</div>
-      <form id="dDay-form">
-        <input required type="date" />
-        <button>Save</button>
+      <form id="dDay-form" class="hidden">
+        <input
+          type="date"
+          required
+          aria-required="true"
+          aria-label="d-day input"
+          class="d-day-input border-style--main"
+        />
+        <button aria-label="d-day save button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m4.5 12.75 6 6 9-13.5"
+            />
+          </svg>
+        </button>
       </form>
-      <span class="hidden"></span>
+      <div id="dDay-date" class="d-day__text hidden">
+        <span aria-label="d-day text"></span>
+        <button aria-label="d-day remove button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18 18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+      </div>
     </div>
 
-    <h1 id="greeting" class="greeting border-style--main hidden"></h1>
-
-    <form id="todo-form" class="todo-form hidden">
-      <div class="todo-title border-style--main">TO DO LIST</div>
-      <input
-        class="border-style--main"
-        type="text"
-        placeholder="Write a To Do and Press Enter"
-      />
-    </form>
-    <ul id="todo-list" class="todo-list"></ul>
+    <section class="section">
+      <form id="todo-form" class="todo-form hidden">
+        <div class="todo-title border-style--main">TO DO LIST</div>
+        <input
+          class="border-style--main"
+          type="text"
+          placeholder="Write a To Do and Press Enter"
+          aria-label="to-do input"
+        />
+      </form>
+      <ul id="todo-list" class="todo-list" aria-label="to-do list"></ul>
+    </section>
 
     <div id="quote-box" class="quote-box hidden">
       <div id="recommend-song" class="recommend-song"></div>
@@ -69,18 +117,18 @@
         />
       </svg>
       <div id="quote" class="quote">
-        <span></span>
-        <span></span>
+        <span aria-label="quote"></span>
+        <span aria-label="quote author"></span>
       </div>
     </div>
 
-    <div id="weather" class="weather hidden">
+    <div id="weather" class="weather hidden" aria-label="weather info">
       <span></span>
       <span></span>
     </div>
 
     <div id="btn-setting" class="btn-setting hidden">
-      <div id="quote-change">
+      <div id="quote-change" aria-label="quote change button">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -92,7 +140,7 @@
           />
         </svg>
       </div>
-      <div id="bg-change">
+      <div id="bg-change" aria-label="background image change button">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -115,4 +163,5 @@
     <script src="js/day.js"></script>
     <script src="js/dday.js"></script>
   </body>
+  <footer id="footer">© 2021 BTS MOMENTUM</footer>
 </html>
