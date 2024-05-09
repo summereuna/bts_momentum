@@ -20,6 +20,13 @@ body {
   justify-content: center;
 }
 
+footer {
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 5px;
+  font-size: 8px;
+}
+
 .hidden {
   display: none !important;
 }
@@ -57,7 +64,6 @@ body {
 }
 
 /* Clock */
-
 .clock-box {
   position: absolute;
   top: 35%;
@@ -113,7 +119,6 @@ body {
 }
 
 /* Log In Form */
-
 .login-form {
   position: absolute;
   top: 40%;
@@ -170,7 +175,6 @@ body {
 }
 
 /* Greeting */
-
 .greeting {
   position: absolute;
   top: 44%;
@@ -181,7 +185,6 @@ body {
 }
 
 /* To Do Form */
-
 .todo-form {
   position: absolute;
   top: 32%;
@@ -392,4 +395,48 @@ body {
 }
 
 .d-day form {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.d-day-input {
+  border-radius: 50px;
+  box-sizing: border-box;
+  width: 180px;
+  padding: 10px 10px 10px 20px;
+  font-size: 15px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 0 5px rgba(0, 0, 0, 0.8);
+  text-align: left;
+  transition: border-color 0.5s ease-in-out;
+}
+
+.d-day button {
+  font-size: 10px;
+  margin-left: 10px;
+  padding: 3px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.d-day button:hover,
+.d-day button:focus {
+  background-color: #d15eff;
+}
+
+.d-day__text {
+  display: flex;
+  align-items: center;
+}
+
+.d-day__text button {
+  width: 20px;
+  height: 20px;
 }
