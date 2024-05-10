@@ -1,0 +1,46 @@
+/* D-day */
+.d-day {
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.d-day__form {
+  display: flex;
+  align-items: center;
+  width: 245px;
+}
+
+.d-day__form input {
+  width: 200px;
+}
+
+.d-day button {
+  font-size: 10px;
+  margin-left: 10px;
+  padding: 3px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.d-day button:hover,
+.d-day button:focus {
+  background-color: #d15eff;
+}
+
+.d-day__text {
+  display: flex;
+  align-items: center;
+}
+
+.d-day__text button {
+  width: 20px;
+  height: 20px;
+}

@@ -44,14 +44,14 @@
     ></h1>
 
     <div id="dDay" class="d-day hidden">
-      <div class="border-style--main">D-Day</div>
-      <form id="dDay-form" class="hidden">
+      <div class="border-style--main title">D-Day</div>
+      <form id="dDay-form" class="d-day__form hidden">
         <input
           type="date"
           required
           aria-required="true"
           aria-label="d-day input"
-          class="d-day-input border-style--main"
+          class="border-style--main border-style--sub"
         />
         <button aria-label="d-day save button">
           <svg
@@ -91,18 +91,16 @@
       </div>
     </div>
 
-    <section class="section">
-      <form id="todo-form" class="todo-form hidden">
-        <div class="todo-title border-style--main">TO DO LIST</div>
-        <input
-          class="border-style--main"
-          type="text"
-          placeholder="Write a To Do and Press Enter"
-          aria-label="to-do input"
-        />
-      </form>
-      <ul id="todo-list" class="todo-list" aria-label="to-do list"></ul>
-    </section>
+    <form id="todo-form" class="todo-form hidden">
+      <div class="title border-style--main">TO DO LIST</div>
+      <input
+        class="border-style--main border-style--sub"
+        type="text"
+        placeholder="Write a To Do and Press Enter"
+        aria-label="to-do input"
+      />
+    </form>
+    <ul id="todo-list" class="todo-list" aria-label="to do list"></ul>
 
     <div id="quote-box" class="quote-box hidden">
       <div id="recommend-song" class="recommend-song"></div>

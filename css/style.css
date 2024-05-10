@@ -1,3 +1,11 @@
+@import "./components/clock.css";
+@import "./components/date.css";
+@import "./components/dday.css";
+@import "./components/greeting.css";
+@import "./components/quote.css";
+@import "./components/todo.css";
+@import "./components/weather.css";
+
 * {
   border: none;
   margin: 0;
@@ -31,17 +39,47 @@ footer {
   display: none !important;
 }
 
-/* Border box Stylee */
-
+/* Border box Style */
 .border-style--main {
   background-color: rgba(128, 0, 255, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.7);
   border-radius: 20px;
-  padding: 2px 12px;
+  /* padding: 2px 12px; */
+  padding: 10px 20px;
+  text-align: center;
+  font-style: italic;
+}
+
+.border-style--sub {
+  box-sizing: border-box;
+  width: 245px;
+  /* padding: 10px 0 10px 20px; */
+  font-size: 15px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 0 5px rgba(0, 0, 0, 0.8);
+  font-style: normal;
+  text-align: left;
+  font-weight: 200;
+  transition: border-color 0.5s ease-in-out;
+}
+
+.border-style--sub::placeholder {
+  color: white;
+  text-shadow: 1px 0 5px rgba(0, 0, 0, 0.8);
+}
+
+.border-style--sub:focus {
+  border-color: #000000;
+}
+
+.title {
+  margin-bottom: 10px;
+  width: 100px;
+  font-weight: 200;
 }
 
 /* Background Image */
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -63,261 +101,7 @@ footer {
   animation: fadeIn 0.5s linear;
 }
 
-/* Clock */
-.clock-box {
-  position: absolute;
-  top: 35%;
-  left: 50px;
-  width: 420px;
-}
-
-.clock {
-  font-size: 50px;
-  font-weight: 600;
-}
-
-/* Bubble Purple You */
-
-@keyframes bubblePurpleYou {
-  0% {
-    transform: none;
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-  100% {
-    transform: none;
-  }
-}
-
-.purple-you {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 51px;
-  position: relative;
-  animation: bubblePurpleYou 2s ease-in-out infinite;
-}
-
-.purple-you span {
-  font-size: 20px;
-  font-weight: 600;
-  text-shadow: none;
-  background-image: linear-gradient(to top, #7028e4 0%, #d746ff 100%);
-  padding: 8px 10px;
-  border-radius: 25px;
-  box-shadow: 0px 0px 10px 1px rgba(255, 255, 255, 0.5);
-}
-
-.purple-you div {
-  position: absolute;
-  display: block;
-  border-style: solid;
-  border-color: #7028e4 transparent;
-  border-width: 10px 7px 0;
-  bottom: 2px;
-}
-
-/* Log In Form */
-.login-form {
-  position: absolute;
-  top: 40%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 30px;
-}
-
-.login-form input {
-  margin-top: 20px;
-  width: 300px;
-  padding: 10px 0;
-
-  font-size: 17px;
-  font-weight: 600;
-  color: rgba(128, 0, 255, 0.7);
-  text-shadow: 1px 0 5px rgba(255, 255, 255, 0.8);
-  text-align: center;
-
-  background-color: rgba(255, 255, 255, 0.5);
-  transition: border-color 0.5s ease-in-out;
-}
-
-.login-form input::placeholder {
-  color: white;
-  text-shadow: 1px 0 5px rgba(0, 0, 0, 0.8);
-}
-
-.login-form input::-webkit-input-placeholder {
-  text-align: center;
-  font-weight: 400;
-}
-
-.login-form input:-moz-placeholder {
-  /* Firefox 18- */
-  text-align: center;
-  font-weight: 400;
-}
-
-.login-form input::-moz-placeholder {
-  /* Firefox 19+ */
-  text-align: center;
-  font-weight: 400;
-}
-
-.login-form input:-ms-input-placeholder {
-  text-align: center;
-  font-weight: 400;
-}
-
-.login-form input:focus {
-  border-color: #d15eff;
-}
-
-/* Greeting */
-.greeting {
-  position: absolute;
-  top: 44%;
-  left: 50px;
-  font-size: 18px;
-  font-weight: 200;
-  font-style: italic;
-}
-
-/* To Do Form */
-.todo-form {
-  position: absolute;
-  top: 32%;
-  right: 50px;
-}
-
-.todo-title {
-  padding: 7px;
-  font-size: 15px;
-  font-weight: 200;
-  font-style: italic;
-  width: 100px;
-  text-align: center;
-}
-
-.todo-form input {
-  box-sizing: border-box;
-  margin-top: 15px;
-  width: 245px;
-  padding: 10px 0 10px 20px;
-  font-size: 15px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.5);
-  text-shadow: 1px 0 5px rgba(0, 0, 0, 0.8);
-  text-align: left;
-
-  transition: border-color 0.5s ease-in-out;
-}
-
-.todo-form input::placeholder {
-  color: white;
-  text-shadow: 1px 0 5px rgba(0, 0, 0, 0.8);
-}
-
-.todo-form input:focus {
-  border-color: #000000;
-}
-
-.todo-list {
-  width: 245px;
-  position: absolute;
-  top: 44%;
-  right: 50px;
-  font-size: 15px;
-  font-weight: 600;
-  list-style: none;
-  height: 255px;
-  overflow: auto;
-}
-
-.todo-list li {
-  box-sizing: border-box;
-  display: flex;
-  justify-content: space-between;
-  font-weight: 400;
-  padding: 5px 10px;
-  color: black;
-  background-color: rgba(255, 255, 255, 0.5);
-  margin: 10px 0;
-  text-shadow: none;
-  border-radius: 30px;
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
-.todo-list button {
-  font-size: 15px;
-  font-weight: 600;
-  margin-left: 10px;
-  color: rgb(227, 0, 0);
-  background-color: transparent;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-}
-
-.todo-list button:hover {
-  transform: scale(0.8);
-}
-
-/* Quote */
-
-.quote-box {
-  position: absolute;
-  bottom: 30px;
-  left: 50px;
-  display: flex;
-  align-items: center;
-  animation: fadeIn 0.3s ease-in-out;
-}
-
-@keyframes rotateCD {
-  from {
-    transform: none;
-  }
-  to {
-    transform: rotateZ(360deg);
-  }
-}
-.quote-box svg {
-  position: absolute;
-  left: 43px;
-  fill: rgba(0, 0, 0, 0.7);
-  animation: rotateCD 2s linear infinite;
-}
-
-.quote {
-  margin-left: 50px;
-  width: 300px;
-  font-size: 15px;
-  font-weight: 400;
-  display: flex;
-  flex-direction: column;
-}
-
-.quote span:last-child {
-  font-size: 12px;
-  margin-top: 5px;
-  font-size: 12px;
-}
-
-/* Recommend Song */
-.recommend-song {
-  z-index: 2;
-}
-
-.recommend-song img {
-  width: 80px;
-  height: 80px;
-  border-radius: 3px;
-  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3);
-}
-
 /* Bottom Buttons */
-
 .btn-setting {
   box-sizing: border-box;
   width: 75px;
@@ -341,102 +125,4 @@ footer {
 .btn-setting svg:hover {
   fill: #d15eff;
   cursor: pointer;
-}
-
-/* Date and Weather*/
-.date,
-.weather {
-  font-size: 15px;
-  font-weight: 400;
-  display: flex;
-  align-items: center;
-  height: 30px;
-}
-
-/* Date */
-
-.date {
-  position: absolute;
-  top: 31%;
-  left: 50px;
-  padding: 0 10px;
-}
-
-/* Weather */
-
-.weather {
-  position: absolute;
-  top: 20px;
-  left: 50px;
-  padding-right: 10px;
-}
-
-.weather span:first-child img {
-  width: 35px;
-  height: 35px;
-}
-
-/* D-day */
-.d-day {
-  position: absolute;
-  top: 20px;
-  right: 50px;
-  display: flex;
-  flex-direction: column;
-}
-
-.d-day div:first-child {
-  margin-bottom: 10px;
-  padding: 7px;
-  text-align: center;
-  width: 70px;
-  font-style: italic;
-  font-weight: 200;
-}
-
-.d-day form {
-  margin-top: 15px;
-  display: flex;
-  align-items: center;
-}
-
-.d-day-input {
-  border-radius: 50px;
-  box-sizing: border-box;
-  width: 180px;
-  padding: 10px 10px 10px 20px;
-  font-size: 15px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.3);
-  text-shadow: 1px 0 5px rgba(0, 0, 0, 0.8);
-  text-align: left;
-  transition: border-color 0.5s ease-in-out;
-}
-
-.d-day button {
-  font-size: 10px;
-  margin-left: 10px;
-  padding: 3px;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  transition: background-color 0.3s ease-in-out;
-}
-
-.d-day button:hover,
-.d-day button:focus {
-  background-color: #d15eff;
-}
-
-.d-day__text {
-  display: flex;
-  align-items: center;
-}
-
-.d-day__text button {
-  width: 20px;
-  height: 20px;
 }

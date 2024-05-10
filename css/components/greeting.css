@@ -1,0 +1,105 @@
+/* Bubble Purple You */
+@keyframes bubblePurpleYou {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+.purple-you {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 51px;
+  position: relative;
+  animation: bubblePurpleYou 2s ease-in-out infinite;
+}
+
+.purple-you span {
+  font-size: 20px;
+  font-weight: 600;
+  text-shadow: none;
+  background-image: linear-gradient(to top, #7028e4 0%, #d746ff 100%);
+  padding: 8px 10px;
+  border-radius: 25px;
+  box-shadow: 0px 0px 10px 1px rgba(255, 255, 255, 0.5);
+}
+
+.purple-you div {
+  position: absolute;
+  display: block;
+  border-style: solid;
+  border-color: #7028e4 transparent;
+  border-width: 10px 7px 0;
+  bottom: 2px;
+}
+
+/* Log In Form */
+.login-form {
+  position: absolute;
+  top: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 30px;
+}
+
+.login-form input {
+  margin-top: 20px;
+  width: 300px;
+  padding: 10px 0;
+  font-size: 17px;
+  font-weight: 600;
+  color: rgba(128, 0, 255, 0.7);
+  text-shadow: 1px 0 5px rgba(255, 255, 255, 0.8);
+  text-align: center;
+
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: border-color 0.5s ease-in-out;
+}
+
+.login-form input::placeholder {
+  color: white;
+  text-shadow: 1px 0 5px rgba(0, 0, 0, 0.8);
+}
+
+.login-form input::-webkit-input-placeholder {
+  text-align: center;
+  font-weight: 400;
+}
+
+.login-form input:-moz-placeholder {
+  /* Firefox 18- */
+  text-align: center;
+  font-weight: 400;
+}
+
+.login-form input::-moz-placeholder {
+  /* Firefox 19+ */
+  text-align: center;
+  font-weight: 400;
+}
+
+.login-form input:-ms-input-placeholder {
+  text-align: center;
+  font-weight: 400;
+}
+
+.login-form input:focus {
+  border-color: #d15eff;
+}
+
+/* Greeting */
+.greeting {
+  position: absolute;
+  top: 44%;
+  left: 50px;
+  font-size: 18px;
+  font-weight: 200;
+  font-style: italic;
+}
