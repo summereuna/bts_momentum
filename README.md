@@ -1,18 +1,23 @@
-# bts_momentum
-BTS Momentum with VanillaJS
+# 공유하고 싶은 일상 그 순간, Vl☻g  
+2021년 7월, 개인 프로젝트
 
-## 😎 result
-<img width="1438" alt="btsmomentum" src="https://user-images.githubusercontent.com/58466648/154663275-cc654dce-b137-478c-9834-69509a2951c7.png">
-👉 https://summereuna.github.io/bts_momentum/
+### 소개
+Chrome 웹 스토어의 인기 확장 프로그램인 Momentum의 아이디어를 착안하여 JavaScript로 방탄소년단의 팬 아미를 위한 개인 로컬 To Do List 사이트를 만들었습니다.
 
-## 👀 What's in?
-* ⏰ Real Time Clock and Date
-* 🙂 Saving and Getting username with localStorage
-* ❗️ Saving, Getting and Removing To Do List with localStorage
-* 💜 Random background Image of BTS and Changing button
-* 📝 Random Quotes of BTS and Changing button
-* ☁️ Weather with Geolocation (Using Open Weather Map API)
-* 🎶 Recommending a BTS's Song that Fits the Current Quote.
+### 구현 기능
+* ⏰ 실시간 날짜, 시간 가져오기
+* 🙂 로컬스토리지에 사용자 이름 저장하고 가져오기
+* ❗️ 로컬스토리지에 To Do List와 D-day 저장하고 가져오고 삭제하기
+* 💜 BTS 백그라운드 이미지 랜덤하게 바꾸기
+* 📝 BTS 명언/가사 랜덤하게 바꾸기
+* 🎶 BTS 명언/가사에 맞는 노래 추천하기
+* ☁️ Open Weather Map API와 사용해 날씨 정보와 날씨 이모티콘 가져오기
 
-## ✍️
-* HTML / CSS / Vanilla JavaScript
+### 구현 결과
+#### 사이트
+[🌐 BTS Momentum](https://summereuna.github.io/bts_momentum/)
+#### 사이트 화면
+![](https://github.com/summereuna/bts_momentum/assets/58466648/643c2b29-67e5-4f5b-818f-dd384da4cc2e)
+
+### 스킬
+- `JavaScript` `HTML` `SCSS`
